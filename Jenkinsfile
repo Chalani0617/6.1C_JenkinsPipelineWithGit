@@ -20,10 +20,9 @@ pipeline {
             }
             post {
                 always {  
-                    emailext subject: "Integration Test Result",
-                             body: "The integration tests on staging stage have completed successfully.",
-                             to: 'chalalamahewa@gmail.com',
-                             attachLog: true   
+                    mail to: 'chalalamahewa@gmail.com',
+                    subject: "Integration Test Result",
+                    body: "The integration tests on staging stage have completed successfully. attachLog : true"
                 }
             }
         }
