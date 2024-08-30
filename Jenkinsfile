@@ -43,10 +43,10 @@ pipeline {
                 echo 'mvn dependency-check:check'
             }
             post {
-                always {  emailext subject: "Security scan Result.",
-                             body: "The integration tests on staging stage have completed successfully.",
-                             to: 'chalalamahewa@gmail.com',
-                             attachLog: true
+                always {  
+                    mail to: 'chalalamahewa@gmail.com',
+                    subject: "Security scan Result.",
+                    body: "The integration tests on staging stage have completed successfully. attachLog: true"
                 }
             }
         }
@@ -70,10 +70,10 @@ pipeline {
                 
             }
             post {
-                always { emailext subject: "Integration Test on Staging Result.",
-                             body: "The integration tests on staging stage have completed successfully.",
-                             to: 'chalalamahewa@gmail.com',
-                             attachLog: true
+                always { 
+                    mail to: 'chalalamahewa@gmail.com',
+                    subject: "Integration Test on Staging Result.",
+                    body: "The integration tests on staging stage have completed successfully."
                 }
             }
         }
