@@ -2,14 +2,7 @@
 
 pipeline {
     agent any
-
-    environment
-    {
-        DIRECTORY_PATH = "${env.WORKSPACE}"
-        TESTING_ENVIRONMENT = 'TestingEnvironment'
-        PRODUCTION_ENVIRONMENT = 'Chalani Lamahewa'
-    }
-
+    
     stages {
         stage('Build') {
             steps {
