@@ -29,7 +29,7 @@ pipeline {
                 always {
                     emailext subject: "Unit and Integration Test Result: ${currentBuild.currentResult}",
                              body: "The unit and integration test stage has completed with status: ${currentBuild.currentResult}.",
-                             to: 's223817302@deakin.edu.au',
+                             to: 'chalalamahewa@gmail.com',
                              attachLog: true
                 }
             }
@@ -54,7 +54,7 @@ pipeline {
                 always {
                     emailext subject: "Security Scan Result: ${currentBuild.currentResult}",
                              body: "The security scan stage has completed with status: ${currentBuild.currentResult}.",
-                             to: 's223817302@deakin.edu.au',
+                             to: 'chalalamahewa@gmail.com',
                              attachLog: true
                 }
             }
@@ -82,7 +82,7 @@ pipeline {
                 always {
                     emailext subject: "Integration Test on Staging Result: ${currentBuild.currentResult}",
                              body: "The integration tests on staging stage have completed with status: ${currentBuild.currentResult}.",
-                             to: 's223817302@deakin.edu.au',
+                             to: 'chalalamahewa@gmail.com',
                              attachLog: true
                 }
             }
