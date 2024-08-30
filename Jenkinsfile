@@ -29,7 +29,7 @@ pipeline {
                 always {     mail to: 'chalalamahewa@gmail.com',
                              subject: "Unit and Integration Test Result: ${currentBuild.currentResult}",
                              body: "The unit and integration test stage has completed with status: ${currentBuild.currentResult}.",
-                             attachLog: true
+
                 }
             }
         }
@@ -54,7 +54,7 @@ pipeline {
                              mail to: 'chalalamahewa@gmail.com',
                              subject: "Security Scan Result: ${currentBuild.currentResult}",
                              body: "The security scan stage has completed with status: ${currentBuild.currentResult}.",
-                             attachLog: true
+
                 }
             }
         }
@@ -82,7 +82,7 @@ pipeline {
                              mail to: 'chalalamahewa@gmail.com',
                              subject: "Integration Test on Staging Result: ${currentBuild.currentResult}",
                              body: "The integration tests on staging stage have completed with status: ${currentBuild.currentResult}.",
-                             attachLog: true
+
                 }
             }
         }
