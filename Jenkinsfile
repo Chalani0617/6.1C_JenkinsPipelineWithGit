@@ -22,7 +22,8 @@ pipeline {
                 always {  
                     mail to: 'chalalamahewa@gmail.com',
                     subject: "Integration Test Result",
-                    body: "The integration tests on staging stage have completed successfully. attachLog : true"
+                    body: "The integration tests on staging stage have completed successfully."
+                    attachLog : true
                 }
             }
         }
