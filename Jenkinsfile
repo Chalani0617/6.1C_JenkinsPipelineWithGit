@@ -19,7 +19,7 @@ pipeline {
                 echo 'mvn test'
             }
             post {
-                always {  
+                success {  
                     emailext (
                     attachLog : true,
                     to : 'chalalamahewa@gmail.com',
